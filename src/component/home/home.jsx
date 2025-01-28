@@ -13,7 +13,7 @@ function Home() {
         <h1 className='text-center text-9xl font-extrabold'> Portfolio </h1> */}
 
             <section
-                className="bg-[url('assets/fond.jpg')] bg-cover bg-center h-screen relative"
+                className="bg-[url('./assets/fond.jpg')] bg-cover bg-center h-screen relative"
             >
 
 
