@@ -16,7 +16,7 @@ function Service() {
 
 
     const cards = [
-        { id: 1, image: "/src/assets/icone/react.png", title: "React" },
+        { id: 1, image: "src/assets/icone/react.png", title: "React" },
         { id: 2, image: "/src/assets/icone/angular.webp", title: "Angular" },
         { id: 3, image: "/src/assets/icone/VueJS.webp", title: "Vue" },
         { id: 4, image: "/src/assets/icone/html.webp", title: "HTML" },
