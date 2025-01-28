@@ -6,7 +6,8 @@ function Cv() {
             <div className="relative  h-screen overflow-hidden">
                 <video
                     className="absolute top-0 left-0 w-full h-full object-cover"
-                    src="/src/assets/cv_vid.mp4"
+                    // src="/src/assets/cv_vid.mp4"
+                    src={`${import.meta.env.BASE_URL}/src/assets/cv_vid.mp4`} alt="cv"
                     autoPlay
                     loop
                     muted
