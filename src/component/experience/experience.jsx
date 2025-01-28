@@ -28,21 +28,21 @@ function Experience() {
             company: 'Finistère Assurance',
             description: `Intégration d'outils de correction d'adresses postales et géolocalisation dans une application.`,
             date: 'Avril 2024 - Juin 2024',
-            vid: "/src/assets/FI_vid.mp4",
+            vid: "./assets/FI_vid.mp4",
         },
         {
             title: 'Développeur IA',
             company: 'MerConcept',
             description: 'Estimation de la hauteur du trimaran SVR Lazartigue par réseau de neurones.',
             date: 'Décembre 2023 - Avril 2024',
-            vid: "/src/assets/merConcept_vid.mp4"
+            vid: "./assets/merConcept_vid.mp4"
         },
         {
             title: `Développeur d'application`,
             company: 'UBO',
             description: `Ajout de fonctionnalité d'aide à la décision pour le routage en mer.`,
             date: 'Mai 2023 - Juin 2023',
-            vid: "/src/assets/Routage_dev.mp4"
+            vid: "./assets/Routage_dev.mp4"
         },
     ];
 

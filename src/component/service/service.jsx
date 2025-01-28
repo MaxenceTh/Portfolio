@@ -16,15 +16,15 @@ function Service() {
 
 
     const cards = [
-        { id: 1, image: "src/assets/icone/react.png", title: "React" },
-        { id: 2, image: "/src/assets/icone/angular.webp", title: "Angular" },
-        { id: 3, image: "/src/assets/icone/VueJS.webp", title: "Vue" },
-        { id: 4, image: "/src/assets/icone/html.webp", title: "HTML" },
-        { id: 5, image: "/src/assets/icone/css.webp", title: "CSS" },
-        { id: 6, image: "/src/assets/icone/Tailwind_CSS.webp", title: "Tailwind" },
-        { id: 7, image: "/src/assets/icone/Spring_Boot.webp", title: "Spring" },
-        { id: 8, image: "/src/assets/icone/postgresql.webp", title: "PostgreSQL" },
-        { id: 9, image: "/src/assets/icone/postgis.png", title: "PostGIS" },
+        { id: 1, image: "./assets/icone/react.png", title: "React" },
+        { id: 2, image: "./assets/icone/angular.webp", title: "Angular" },
+        { id: 3, image: "./assets/icone/VueJS.webp", title: "Vue" },
+        { id: 4, image: "./assets/icone/html.webp", title: "HTML" },
+        { id: 5, image: "./assets/icone/css.webp", title: "CSS" },
+        { id: 6, image: "./assets/icone/Tailwind_CSS.webp", title: "Tailwind" },
+        { id: 7, image: "./assets/icone/Spring_Boot.webp", title: "Spring" },
+        { id: 8, image: "./assets/icone/postgresql.webp", title: "PostgreSQL" },
+        { id: 9, image: "./assets/icone/postgis.png", title: "PostGIS" },
     ];
 
 
@@ -98,7 +98,7 @@ function Service() {
                         rightElement={
                             <div className="w-full flex justify-center">
                                 <img
-                                    src="src/assets/map.webp"
+                                    src="./assets/map.webp"
                                     alt="Illustration"
                                     className="w-3/4 md:w-2/3 lg:w-1/2 h-auto max-h-96 object-cover rounded-3xl shadow-lg border-2 border-customeBlue"
                                 />
@@ -144,7 +144,7 @@ function Service() {
                     rightElement={
                         <div className="w-full flex justify-center">
                             <img
-                                src="src/assets/map.webp"
+                                src="./assets/map.webp"
                                 alt="Illustration"
                                 className="w-3/4 md:w-2/3 lg:w-1/2 h-auto max-h-96 object-cover rounded-3xl shadow-lg border-2 border-customeBlue"
                             />
