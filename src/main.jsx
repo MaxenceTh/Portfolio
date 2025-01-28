@@ -1,0 +1,26 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import Navbar from './component/navbar/navbar.jsx'
+import Home from './component/home/home.jsx'
+import Experience from './component/experience/experience.jsx'
+import Service from './component/service/service.jsx'
+import Cv from './component/cv/cv.jsx'
+import Footer from './component/formulaire/footer.jsx'
+
+
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Navbar />
+    <Home />
+    <Cv />
+    <Experience />
+    <img src="/src/assets/bordure.svg" alt="" className='bg-black pt-11'/>
+    <Service />
+    <img src="/src/assets/bordureNoir.svg" alt="" className='pt-11 rotate-180 bg-gradient-to-b from-black via-black to-customYellow'/>
+    {/* <Formulaire /> */}
+    <Footer /> 
+  </StrictMode>,
+)
