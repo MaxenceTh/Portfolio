@@ -7,7 +7,7 @@ function SlideInElements({ leftElement, rightElement }) {
   const rightRef = useRef(null);
 
   // Détection si l'écran est mobile (max-width: 768px)
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 800px)" });
 
   // Détection si les éléments sont visibles dans la fenêtre de défilement
   const leftInView = useInView(leftRef, { threshold: 0.2 });
@@ -15,13 +15,13 @@ function SlideInElements({ leftElement, rightElement }) {
 
   // Variants pour l'animation
   const leftVariant = {
-    hidden: { x: "-100%", opacity: 0 },
-    visible: { x: "0%", opacity: 1, transition: { duration: 0.6 } },
+    hidden: { y: "-40%", opacity: 0 },
+    visible: { y: "0%", opacity: 1, transition: { duration: 0.6 } },
   };
 
   const rightVariant = {
-    hidden: { x: "100%", opacity: 0 },
-    visible: { x: "0%", opacity: 1, transition: { duration: 0.6 } },
+    hidden: { y: "40%", opacity: 0 },
+    visible: { y: "0%", opacity: 1, transition: { duration: 0.6 } },
   };
 
   if (isMobile) {
