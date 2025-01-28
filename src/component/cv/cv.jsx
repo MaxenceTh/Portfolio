@@ -7,7 +7,7 @@ function Cv() {
                 <video
                     className="absolute top-0 left-0 w-full h-full object-cover"
                     // src="/src/assets/cv_vid.mp4"
-                    src="../assets/cv_vid.mp4"
+                    src="./assets/cv_vid.mp4"
                     autoPlay
                     loop
                     muted
