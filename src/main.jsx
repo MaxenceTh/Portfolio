@@ -19,7 +19,7 @@ createRoot(document.getElementById('root')).render(
     <Experience />
     <img src="./assets/bordure.svg" alt="" className='bg-black pt-11'/>
     <Service />
-    <img src="./assets/bordureNoir.svg" alt="" className='pt-11 rotate-180 bg-gradient-to-b from-black via-black to-customYellow'/>
+    <img src="./assets/bordureNoir.svg" alt="" className='pt-3 rotate-180 bg-gradient-to-b from-black via-black to-customYellow'/>
     {/* <Formulaire /> */}
     <Footer /> 
   </StrictMode>,
