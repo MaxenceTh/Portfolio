@@ -33,13 +33,13 @@ function Service() {
             <>
                 <div className="bg-customYellow">
                     <h1 className="bg-customYellow text-3xl font-bold text-center mb-8 text-gray-800">Mes Services</h1>
-                    <div className="flex flex-col md:flex-row items-start justify-center px-12 py-16 max-w-7xl mx-auto space-y-12 md:space-y-0 md:space-x-12">
+                    <div className="flex flex-col md:flex-row items-start justify-center px-12 py-16 max-w-full mx-auto space-y-12 md:space-y-0 md:space-x-12">
                         {/* Cards Section */}
                         <div className="flex-1">
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                                 {cards.slice(0, 4).map((card) => (
                                     <div key={card.id} className="flex flex-col items-center space-y-4">
-                                        <img src={card.image} alt={card.title} className="w-32 h-32 object-contain shadow-lg transform transition-transform duration-300 hover:scale-125" />
+                                        <img src={card.image} alt={card.title} className="w-32 h-32 object-cover shadow-lg transform transition-transform duration-300 hover:scale-125" />
                                         <h2 className="text-lg font-semibold text-gray-700">{card.title}</h2>
                                     </div>
                                 ))}
@@ -55,7 +55,7 @@ function Service() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                                 {cards.slice(7, 9).map((card) => (
                                     <div key={card.id} className="flex flex-col items-center space-y-4">
-                                        <img src={card.image} alt={card.title} className="w-32 h-32 object-contain rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-125" />
+                                        <img src={card.image} alt={card.title} className="w-32 h-32 object-cover rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-125" />
                                         <h2 className="text-lg font-semibold text-gray-700">{card.title}</h2>
                                     </div>
                                 ))}
@@ -83,6 +83,7 @@ function Service() {
                                     className="bg-black shadow-md p-6 border-2 border-customeBlue text-center"
                                 >
                                     <p className="text-white font-semibold text-xl"> <ScrollRevealText text={service} />  </p>
+                                    {/* <p className="text-white">toto</p> */}
                                 </div>
                             ))}
                         </div>
