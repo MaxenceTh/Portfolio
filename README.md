@@ -1,6 +1,7 @@
 Apprentissage de ReactJs avec Vite.
 Déploiement de l'application avec GitHub Pages.
 
+Idée:
 https://www.cyberpunk.net/us/fr/
 
 
