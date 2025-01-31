@@ -1,4 +1,7 @@
-Apprentissage du framework Vite avec React.
+Apprentissage de ReactJs avec Vite.
+Déploiement de l'application avec GitHub Pages.
+
+https://www.cyberpunk.net/us/fr/
 
 
 
