@@ -6,7 +6,7 @@ Le projet est de faire un portofolio tout en apprenant le framework ReacJS avec 
 ## Technologie utilisés
 - **ReacJS avec Vite**
 - **Tailwind CSS**
-- **GitHub Pages***
+- **GitHub Pages**
 
 ## Prérequis
 - **npm create vite@latest**
