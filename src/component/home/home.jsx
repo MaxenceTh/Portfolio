@@ -43,10 +43,15 @@ function Home() {
                text-center bg  p-6 rounded-lg text-black bg-customYellow"
                 >
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">-- Recherche d'emploi --</h1>
+                    <h2 className='text-xl underline'>Développeur full stack junior</h2>
                     <p className="mt-2 text-base md:text-lg">
                     Passionné par le développement je conçois des applications performantes et intuitives en utilisant des technologies modernes comme Spring Boot, React, PostgreSQL.
-                    J'aime travailler sur des projets combinant géolocalisation et SIG, avec l'utilisation de PostGIS pour le traitement avancé des données spatiales.
+                    </p>
+                    <p className="mt-2 text-base md:text-lg">
                     J’aime relever des défis techniques, automatiser des processus et optimiser les performances des applications.
+                    </p>
+                    <p className="mt-2 text-base md:text-lg">
+                    J'ai en plus des compétences pour travailler sur des projets combinant géolocalisation et SIG, avec l'utilisation de PostGIS pour le traitement avancé des données spatiales.
                     </p>
                 </div>
 
