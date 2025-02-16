@@ -18,23 +18,36 @@ function Home() {
 
 
                 {/* Texte à gauche */}
-                <div
+                {/* <div
                     className="absolute left-1/2 top-[30%] transform -translate-x-1/2 -translate-y-1/2 
              md:left-72 md:translate-x-0 bg bg-opacity-50 backdrop-blur-sm p-6 
              rounded-lg text-white text-center md:text-left"
                 >
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Recherche d'emploi</h1>
                     <p className="mt-2 text-base md:text-lg">d'une première expérience</p>
-                </div>
+                </div> */}
 
                 {/* Texte à droite */}
-                <div
+                {/* <div
                     className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 
              md:right-72 md:left-auto md:translate-x-0 text-center md:text-right 
              bg bg-opacity-50 backdrop-blur-sm p-6 rounded-lg text-white"
                 >
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Développeur junior</h1>
                     <p className="mt-2 text-base md:text-lg">web / logiciel / full-stack</p>
+                </div> */}
+
+                {/* Texte centré */}
+                <div
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+               text-center bg  p-6 rounded-lg text-black bg-customYellow"
+                >
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">-- Recherche d'emploi --</h1>
+                    <p className="mt-2 text-base md:text-lg">
+                    Passionné par le développement je conçois des applications performantes et intuitives en utilisant des technologies modernes comme Spring Boot, React, PostgreSQL.
+                    J'aime travailler sur des projets combinant géolocalisation et SIG, avec l'utilisation de PostGIS pour le traitement avancé des données spatiales.
+                    J’aime relever des défis techniques, automatiser des processus et optimiser les performances des applications.
+                    </p>
                 </div>
 
                 {/* Texte en bas */}
