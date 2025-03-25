@@ -39,21 +39,29 @@ function Home() {
 
                 {/* Texte centré */}
                 <div
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-               text-center bg  p-6 rounded-lg text-black bg-customYellow"
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+  bg-customYellow text-black p-4 sm:p-6 rounded-lg text-center 
+  w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] max-w-xl shadow-lg"
                 >
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">-- Recherche d'emploi --</h1>
-                    <h2 className='text-xl underline'>Développeur full stack junior</h2>
-                    <p className="mt-2 text-base md:text-lg">
-                    Passionné par le développement je conçois des applications performantes et intuitives en utilisant des technologies modernes comme Spring Boot, React, PostgreSQL.
+                    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+                        -- Recherche d'emploi --
+                    </h1>
+                    <h2 className="text-lg sm:text-xl underline">
+                        Développeur junior
+                    </h2>
+                    <p className="mt-2 text-sm sm:text-base md:text-lg">
+                        Passionné par le développement, je conçois des applications performantes et intuitives
+                        en utilisant des technologies modernes comme React, Vue, Spring, PostgreSQL, ...
                     </p>
-                    <p className="mt-2 text-base md:text-lg">
-                    J’aime relever des défis techniques, automatiser des processus et optimiser les performances des applications.
+                    <p className="mt-2 text-sm sm:text-base md:text-lg">
+                      <strong> J'aime autant le développment backend que frontend !</strong>
                     </p>
-                    <p className="mt-2 text-base md:text-lg">
-                    J'ai en plus des compétences pour travailler sur des projets combinant géolocalisation et SIG, avec l'utilisation de PostGIS pour le traitement avancé des données spatiales.
+                    <p className="mt-2 text-sm sm:text-base md:text-lg">
+                        J'ai en plus des compétences pour travailler sur des projets combinant géolocalisation et SIG,
+                        avec l'utilisation de PostGIS pour le traitement avancé des données spatiales.
                     </p>
                 </div>
+
 
                 {/* Texte en bas */}
                 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">

@@ -34,10 +34,18 @@ function Personnel() {
         {
             title: 'Développeur fullstack',
             company: '',
-            description: `Géolocalisation des cinémas en France. Dévelopement d'une API REST et gestion des coordonnées en base de données.`,
+            description: `Géolocalisation des cinémas en France. Développement d'une API REST et gestion des coordonnées en base de données.`,
             date: 'Janvier 2025 - En cours',
             vid: "./assets/Cinema_vid.mp4",
             lien: "https://github.com/MaxenceTh/Cinema"
+        },
+        {
+            title: 'Développeur front',
+            company: '',
+            description: `Apprentissage du framework Vue.js.`,
+            date: 'Mars 2025 - En cours',
+            vid: "",
+            lien: "https://github.com/MaxenceTh/Gym-Application-in-VueJs"
         },
 
     ];
