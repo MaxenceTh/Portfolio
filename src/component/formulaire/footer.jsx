@@ -13,9 +13,6 @@ function Footer() {
                     <p className="text-center text-customeBlue">thomas.maxence141v2@gmail.com</p>
                 </div>
                 <div className="flex justify-center items-center gap-4">
-                    <a href="https://github.com/MaxenceTh" target="_blank" rel="noopener noreferrer">
-                        <img src="./assets/icone/github-mark-white.png" alt="" className="w-32 h-32 object-contain" />
-                    </a>
                     <a href="https://www.linkedin.com/in/maxence-thomas-a03b57298/" target="_blank" rel="noopener noreferrer">
                         <img src="./assets/icone/logo-linkedin.webp" alt="" className="w-32 h-32 object-contain" />
                     </a>

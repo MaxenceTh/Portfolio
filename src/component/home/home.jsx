@@ -50,16 +50,22 @@ function Home() {
                         Développeur junior
                     </h2>
                     <p className="mt-2 text-sm sm:text-base md:text-lg">
-                        Passionné par le développement, je conçois des applications performantes et intuitives
-                        en utilisant des technologies modernes comme React, Vue, Spring, PostgreSQL, ...
+                        Passionné par le développement et titulaire d'un master informatique, je suis
+                        à la recheche d'un premier emploi.
                     </p>
                     <p className="mt-2 text-sm sm:text-base md:text-lg">
-                      <strong> J'aime autant le développment backend que frontend !</strong>
+                        <strong> J'aime autant le développment backend que frontend !</strong>
                     </p>
                     <p className="mt-2 text-sm sm:text-base md:text-lg">
                         J'ai en plus des compétences pour travailler sur des projets combinant géolocalisation et SIG,
                         avec l'utilisation de PostGIS pour le traitement avancé des données spatiales.
                     </p>
+                    <div className="max-w-md mx-auto shadow-md p-6 flex justify-center items-center flex-col">
+                        <a href="https://github.com/MaxenceTh" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icone/github-mark-white.png" alt="" className="w-20 h-20 object-contain" />
+                        </a>
+                        <strong>Mon GitHub</strong>
+                    </div>
                 </div>
 
 
