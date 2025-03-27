@@ -42,9 +42,9 @@ function Personnel() {
         {
             title: 'Développeur front',
             company: '',
-            description: `Apprentissage du framework Vue.js.`,
+            description: `Petite application permettant de créer sa propre séance de musculation avec API Ninjas. Apprentissage du framework Vue.js.`,
             date: 'Mars 2025 - En cours',
-            vid: "",
+            vid: "./assets/vue.mp4",
             lien: "https://github.com/MaxenceTh/Gym-Application-in-VueJs"
         },
 
