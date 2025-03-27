@@ -19,3 +19,4 @@ Le thème du portoflio a été inspiré de l'univers de Cyberpunk.
 Les couleurs:
 Jaune: '#fcee0a'
 Bleu: '#00f0ff'
+https://simpleicons.org/
