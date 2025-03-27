@@ -8,7 +8,6 @@ function Service() {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
     const services = [
-        "Développeur Web",
         "Développeur Backend",
         "Développeur Frontend",
         "Développeur Full Stack",
@@ -90,7 +89,7 @@ function Service() {
 
 
                     </div>
-
+{/* 
                     <SlideInElements leftElement={
                         <p className="text-gray-700 font-semibold text-xl text-center">
                             Gestion des coordonnées géographiques
@@ -106,7 +105,7 @@ function Service() {
                             </div>
                         }>
 
-                    </SlideInElements>
+                    </SlideInElements> */}
 
                 </div >
 
@@ -137,7 +136,7 @@ function Service() {
 
                 </div>
 
-                <SlideInElements leftElement={
+                {/* <SlideInElements leftElement={
                     <p className="text-gray-700 font-semibold text-xl text-center">
                         Gestion des coordonnées géographiques
                     </p>
@@ -152,7 +151,7 @@ function Service() {
                         </div>
                     }>
 
-                </SlideInElements>
+                </SlideInElements> */}
 
             </div >
 

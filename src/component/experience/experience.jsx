@@ -26,14 +26,14 @@ function Experience() {
         {
             title: 'Développeur Fullstack',
             company: 'Finistère Assurance',
-            description: `Intégration d'outils de correction d'adresses postales et géolocalisation dans une application.`,
+            description: `Intégration d'outils de correction d'adresses postales et de géolocalisation dans une application.`,
             date: 'Avril 2024 - Juin 2024',
             vid: "./assets/FI_vid.mp4",
         },
         {
             title: 'Développeur IA',
             company: 'MerConcept',
-            description: 'Estimation de la hauteur du trimaran SVR Lazartigue par réseau de neurones.',
+            description: 'Estimation de la hauteur du trimaran SVR Lazartigue par un réseau de neurones.',
             date: 'Décembre 2023 - Avril 2024',
             vid: "./assets/merConcept_vid.mp4"
         },
