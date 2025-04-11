@@ -47,6 +47,14 @@ function Personnel() {
             vid: "./assets/vue.mp4",
             lien: "https://github.com/MaxenceTh/Gym-Application-in-VueJs"
         },
+        {
+            title: 'Développeur front',
+            company: '',
+            description: `Application web permettant de centraliser et catégoriser des vidéos d'entraînement de badminton, avec des outils d'entraînement. Apprentissage de Vue.js.`,
+            date: 'Avril 2025 - En cours',
+            vid: "./assets/badTraining.mp4",
+            lien: "https://github.com/MaxenceTh/BadmintonTraining"
+        },
 
     ];
 
