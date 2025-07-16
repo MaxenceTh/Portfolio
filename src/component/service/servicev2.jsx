@@ -80,6 +80,8 @@ function Service() {
     }
 
     return (
+        <>
+        <div className="w-full h-1 bg-gradient-to-r from-[#00FFF7] via-[#FF00F7] to-[#00FFF7] mb-8"></div>
         <div className="bg-gradient-to-b from-[#0f0f1a] via-[#05050a] to-[#000005] min-h-screen py-16 px-12 flex flex-col items-center text-white">
             <h1 className="text-4xl font-extrabold text-center mb-8 text-customBlue tracking-wide neon-text">
                 Mes Services
@@ -94,6 +96,8 @@ function Service() {
             {/* Fullstack centré */}
             <ServiceSection title={services[2]} cards={cards.slice(6)} />
         </div>
+        <div className="w-full h-1 bg-gradient-to-r from-[#00FFF7] via-[#FF00F7] to-[#00FFF7] mb-8"></div>
+        </>
     );
 }
 
