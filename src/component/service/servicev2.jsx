@@ -1,10 +1,8 @@
 import ScrollRevealText from "../animation/ScrollRevealText";
-import SlideInElements from "../animation/SlideInDivs";
+import ScrollRevealCards from "../animation/ScrollRevealCards";
 import { useMediaQuery } from "react-responsive";
 
 function Service() {
-
-    // Détection si l'écran est mobile (max-width: 768px)
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
     const services = [
@@ -12,7 +10,6 @@ function Service() {
         "Développeur Frontend",
         "Développeur Full Stack",
     ];
-
 
     const cards = [
         { id: 1, image: "./assets/icone/spring.png", title: "Spring" },
@@ -31,116 +28,73 @@ function Service() {
         { id: 14, image: "./assets/icone/postgresql.png", title: "PostgreSQL" },
     ];
 
+    // Section service stylée cyberpunk
+    const ServiceSection = ({ title, cards }) => (
+        <section className="bg-[#0a0a12] border border-[#0ff] rounded-2xl p-8 max-w-5xl w-full mx-auto mb-20 shadow-neon">
+            <h2 className="text-cyan-400 text-3xl font-extrabold text-center mb-8 tracking-wide neon-text">
+                <ScrollRevealText text={title} />
+            </h2>
+            <div
+                className={`grid gap-8 ${cards.length <= 3 ? "grid-cols-1 md:grid-cols-3" : "grid-cols-2 md:grid-cols-4"
+                    }`}
+            >
+                {cards.map(({ id, image, title }) => (
+                    <ScrollRevealCards key={id}>
+                        <div className="flex flex-col items-center p-6 bg-[#111122] rounded-xl border border-[#0ff] shadow-lg hover:shadow-neon transform hover:scale-105 transition duration-300">
+                            <div className="w-20 h-20 mb-4 flex justify-center items-center bg-white bg-opacity-20 rounded-md p-2 shadow-neon">
+                                {/* Logo noir sur fond néon foncé, on ajoute un glow */}
+                                <img
+                                    src={image}
+                                    alt={title}
+                                    className="w-full h-full object-contain filter brightness-150"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <p className="text-[#0ff] font-semibold text-lg text-center tracking-wide">{title}</p>
+                        </div>
+                    </ScrollRevealCards>
+                ))}
+            </div>
+        </section>
+    );
 
-    if (!isMobile) {
+    if (isMobile) {
         return (
-            <>
- <div className="bg-customYellow">
-    <h1 className="bg-customYellow text-3xl font-bold text-center mb-8 text-gray-800">Mes Services</h1>
-    
-    {/* Services 1 et 2 en ligne */}
-    <div className="flex flex-row justify-center items-start gap-20 px-16">
-        {/* Service 1 */}
-        <div className="flex flex-col items-center w-full">
-            <div className="bg-black shadow-md p-6 border-2 border-customeBlue text-center mb-4 w-full">
-                <p className="text-white font-semibold text-xl"> <ScrollRevealText text={services[0]} /> </p>
+            <div className="bg-gradient-to-b from-[#0f0f1a] via-[#05050a] to-[#000005] min-h-screen py-12 px-6 text-white">
+                <h1 className="text-4xl font-extrabold text-center mb-12 tracking-widest neon-text">
+                    Mes Services
+                </h1>
+
+                {services.map((service, index) => {
+                    let cardsForService;
+                    if (index === 0) cardsForService = cards.slice(0, 3);
+                    else if (index === 1) cardsForService = cards.slice(3, 6);
+                    else cardsForService = cards.slice(6);
+
+                    return (
+                        <ServiceSection key={index} title={service} cards={cardsForService} />
+                    );
+                })}
             </div>
-            <div className="grid grid-cols-3 gap-8 w-full">
-                {cards.slice(0, 3).map((card) => (
-                    <div key={card.id} className="flex flex-col items-center space-y-4">
-                        <img src={card.image} alt={card.title} className="w-32 h-32 object-cover shadow-lg transform transition-transform duration-300 hover:scale-125" />
-                        <h2 className="text-lg font-semibold text-gray-700">{card.title}</h2>
-                    </div>
-                ))}
-            </div>
-        </div>
-
-        {/* Service 2 */}
-        <div className="flex flex-col items-center w-full">
-            <div className="bg-black shadow-md p-6 border-2 border-customeBlue text-center mb-4 w-full">
-                <p className="text-white font-semibold text-xl"> <ScrollRevealText text={services[1]} /> </p>
-            </div>
-            <div className="grid grid-cols-3 gap-8 w-full">
-                {cards.slice(3, 6).map((card) => (
-                    <div key={card.id} className="flex flex-col items-center space-y-4">
-                        <img src={card.image} alt={card.title} className="w-32 h-32 object-cover shadow-lg transform transition-transform duration-300 hover:scale-125" />
-                        <h2 className="text-lg font-semibold text-gray-700">{card.title}</h2>
-                    </div>
-                ))}
-            </div>
-        </div>
-    </div>
-
-    {/* Service 3 centré en dessous */}
-    <div className="flex flex-col items-center mt-16">
-        <div className="bg-black shadow-md p-6 border-2 border-customeBlue text-center w-full max-w-2xl">
-            <p className="text-white font-semibold text-xl"> <ScrollRevealText text={services[2]} /> </p>
-        </div>
-        <div className="grid grid-cols-4 gap-8 mt-4">
-            {cards.slice(6, 14).map((card) => (
-                <div key={card.id} className="flex flex-col items-center space-y-4">
-                    <img src={card.image} alt={card.title} className="w-32 h-32 object-cover shadow-lg transform transition-transform duration-300 hover:scale-125" />
-                    <h2 className="text-lg font-semibold text-gray-700">{card.title}</h2>
-                </div>
-            ))}
-        </div>
-    </div>
-</div>
-
-
-
-
-
-            </>
         );
-    } else {
-
-        return (
-            <>
-                <div className="bg-customYellow">
-                    <h1 className="bg-customYellow text-3xl font-bold text-center mb-8 text-gray-800">Mes Services</h1>
-                    <div className="flex flex-col md:flex-row items-start justify-center px-12 py-16 max-w-7xl mx-auto space-y-12 md:space-y-0 md:space-x-12">
-
-
-
-                        {/* Services Section */}
-                        <div className="flex-1 space-y-6 pl-8">
-                            {services.map((service, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-black shadow-md p-6 border-2 border-customeBlue text-center"
-                                >
-                                    <p className="text-white font-semibold text-xl"> <ScrollRevealText text={service} />  </p>
-                                </div>
-                            ))}
-                        </div>
-
-
-                    </div>
-
-                    {/* <SlideInElements leftElement={
-                    <p className="text-gray-700 font-semibold text-xl text-center">
-                        Gestion des coordonnées géographiques
-                    </p>
-                }
-                    rightElement={
-                        <div className="w-full flex justify-center">
-                            <img
-                                src="./assets/map.webp"
-                                alt="Illustration"
-                                className="w-3/4 md:w-2/3 lg:w-1/2 h-auto max-h-96 object-cover rounded-3xl shadow-lg border-2 border-customeBlue"
-                            />
-                        </div>
-                    }>
-
-                </SlideInElements> */}
-
-                </div >
-
-            </>
-        )
-
     }
+
+    return (
+        <div className="bg-gradient-to-b from-[#0f0f1a] via-[#05050a] to-[#000005] min-h-screen py-16 px-12 flex flex-col items-center text-white">
+            <h1 className="text-4xl font-extrabold text-center mb-8 text-customBlue tracking-wide neon-text">
+                Mes Services
+            </h1>
+
+            {/* Backend & Frontend côte à côte */}
+            <div className="flex justify-center gap-12 w-full max-w-7xl mb-20">
+                <ServiceSection title={services[0]} cards={cards.slice(0, 3)} />
+                <ServiceSection title={services[1]} cards={cards.slice(3, 6)} />
+            </div>
+
+            {/* Fullstack centré */}
+            <ServiceSection title={services[2]} cards={cards.slice(6)} />
+        </div>
+    );
 }
 
 export default Service;

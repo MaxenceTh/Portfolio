@@ -7,3 +7,11 @@ body{
     background: black;
     overflow-x: hidden;
 }
+
+.neon-text {
+  text-shadow: 0 0 10px #00FFF7, 0 0 20px #FF00F7;
+}
+
+.neon-text-violet {
+  text-shadow: 0 0 10px #FF00F7, 0 0 20px #FF00F7;
+}
