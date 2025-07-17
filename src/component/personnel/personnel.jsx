@@ -82,6 +82,15 @@ function Personnel() {
             vid: "./assets/badTraining.mp4",
             lien: "https://github.com/MaxenceTh/BadmintonTraining",
         },
+         {
+            title: "Développeur python",
+            company: "",
+            description:
+                "Aplication présentant plusieurs algorithmes de tri en Python. Permet de visualiser le fonctionnement de chaque algorithme.",
+            date: "Juillet 2025 - En cours",
+            vid: "./assets/algoSorting.mp4",
+            lien: "https://github.com/MaxenceTh/SortingAlgorithm",
+        },
     ];
 
     return (
