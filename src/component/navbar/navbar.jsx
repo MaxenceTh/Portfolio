@@ -15,7 +15,7 @@ function Navbar() {
   <div className="container mx-auto flex items-center justify-between p-4">
     {/* Logo */}
     <div className="text-2xl font-bold text-customPink tracking-wide">
-      <a href="#">Portfolio</a>
+      <a href="#">Maxence Thomas</a>
     </div>
 
     {/* Desktop Menu */}
