@@ -2,7 +2,7 @@ function Cv() {
 
     return (
         <>
-        <div className="h-[4px] bg-gradient-to-r from-customBlue via-customPink to-customBlue animate-pulse shadow-[0_0_10px_#FF00F7]" />
+            <div className="h-[4px] bg-gradient-to-r from-customBlue via-customPink to-customBlue animate-pulse shadow-[0_0_10px_#FF00F7]" />
 
 
             <div className="relative h-screen overflow-hidden">
@@ -17,7 +17,20 @@ function Cv() {
                 ></video>
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 flex flex-col items-center justify-center">
+                    {/* Conteneur du texte */}
+                    {/* <div className="text-center text-white z-10">
+                        <h1 className="text-4xl sm:text-6xl font-bold mb-4">
+                            Bonjour,
+                        </h1>
+                        <p className="text-lg text-gray-300 m:text-xl mb-8 max-w-3xl mx-auto">
+                            je suis ingénieur logiciel full stack, prêt à relever de nouveaux défis. 
+                            Actuellement en recherche d’opportunités professionnelles, je continue à développer mes compétences à travers des projets personnels. 
+                            Passionné de sport, et plus particulièrement de badminton, j’aime créer des projets en lien avec mes centres d’intérêt.
+                        </p>
+                    </div> */}
+
+
                     {/* Bouton CV */}
                     <a
                         href="./assets/cv.pdf"

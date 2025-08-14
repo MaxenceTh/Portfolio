@@ -14,9 +14,14 @@ function Home() {
       bg-[#0f0f1a]/80 backdrop-blur-sm p-6 sm:p-10 rounded-2xl text-center 
       w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] max-w-xl shadow-[0_0_30px_#00FFF7] border border-customBlue"
                 >
-                    <h1 className="text-3xl sm:text-4xl font-bold text-customBlue">Développeur junior</h1>
+                    <h1 className="text-3xl sm:text-4xl font-bold text-customBlue">Ingénieur full stack</h1>
                     <p className="text-base sm:text-lg text-gray-300 mt-2">
-                        Titulaire d’un master en informatique et passionné de développement je suis à la recherche d'un emploi dans le domaine.
+                         Actuellement en {" "}
+                         <span className="underline underline-offset-4 decoration-cyan-400 font-semibold">
+                           recherche d’opportunités professionnelles
+                        </span>, je continue à développer mes compétences à travers des projets personnels.
+                        Passionné de sport, et plus particulièrement de badminton, j’aime créer des projets en lien avec mes centres d’intérêt.
+
                     </p>
 
                     <div className="flex items-center justify-center gap-2 mt-6">
