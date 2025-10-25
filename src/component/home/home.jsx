@@ -18,7 +18,7 @@ function Home() {
                     <p className="text-base sm:text-lg text-gray-300 mt-2">
                          Actuellement en {" "}
                          <span className="underline underline-offset-4 decoration-cyan-400 font-semibold">
-                           recherche d’opportunités professionnelles
+                           recherche active d'un poste
                         </span>, je continue à développer mes compétences à travers des projets personnels.
                         Passionné de sport, et plus particulièrement de badminton, j’aime créer des projets en lien avec mes centres d’intérêt.
 
