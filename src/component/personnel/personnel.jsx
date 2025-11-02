@@ -94,7 +94,7 @@ function Personnel() {
     ];
 
     return (
-        <section className="bg-gradient-to-b from-[#0f0f1a] via-black to-black py-16 relative z-10">
+        <section className="bg-gradient-to-b from-[#0f0f1a] via-black to-black py-16 relative z-1" id="perso">
             <div className="container mx-auto px-6">
                 <h1 className="text-4xl font-extrabold text-center mb-12 text-customPink tracking-wide neon-text-violet">
                     MES PROJETS PERSONNELS

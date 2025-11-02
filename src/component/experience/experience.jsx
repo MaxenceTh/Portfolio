@@ -62,9 +62,9 @@ function Experience() {
 
   return (
     <>
-    <div className="w-full h-1 bg-gradient-to-r from-[#00FFF7] via-[#FF00F7] to-[#00FFF7] mb-8"></div>
+    <div className="w-full h-1 bg-gradient-to-r from-[#00FFF7] via-[#FF00F7] to-[#00FFF7] mb-8" id="experience"></div>
 
-    <section className="bg-gradient-to-b from-[#0f0f1a] via-black to-[#000000] py-16 relative z-10">
+    <section className="bg-gradient-to-b from-[#0f0f1a] via-black to-[#000000] py-16 relative z-1">
       <div className="container mx-auto px-6">
         <h1 className="text-4xl font-extrabold text-center mb-12 text-customBlue tracking-wide neon-text">
           MES EXPÉRIENCES

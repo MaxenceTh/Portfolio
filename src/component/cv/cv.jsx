@@ -2,7 +2,7 @@ function Cv() {
 
     return (
         <>
-            <div className="h-[4px] bg-gradient-to-r from-customBlue via-customPink to-customBlue animate-pulse shadow-[0_0_10px_#FF00F7]" />
+            <div className="h-[4px] bg-gradient-to-r from-customBlue via-customPink to-customBlue animate-pulse shadow-[0_0_10px_#FF00F7]" id="cv" />
 
 
             <div className="relative h-screen overflow-hidden">

@@ -38,11 +38,12 @@ function Home() {
                 </div>
 
                 {/* Texte en bas */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+                {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
                     <h1 className="text-center font-extrabold text-[#FF00F7] drop-shadow-[0_0_10px_#FF00F7] text-4xl sm:text-6xl md:text-8xl lg:text-9xl">
                         <LetterByLetter />
                     </h1>
-                </div>
+                </div> */}
+
             </section>
 
 

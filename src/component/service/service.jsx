@@ -30,7 +30,7 @@ function Service() {
     if (!isMobile) {
         return (
             <>
-                <div className="bg-customYellow">
+                <div className="bg-customYellow" id="competence">
                     <h1 className="bg-customYellow text-3xl font-bold text-center mb-8 text-gray-800">Mes Services</h1>
                     <div className="flex flex-col md:flex-row items-start justify-center px-12 py-16 max-w-full mx-auto space-y-12 md:space-y-0 md:space-x-12">
                         {/* Cards Section */}

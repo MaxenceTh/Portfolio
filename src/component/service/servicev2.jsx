@@ -59,7 +59,7 @@ function Skills() {
     );
 
     return (
-        <div className="bg-gradient-to-b from-[#0f0f1a] via-[#05050a] to-[#000005] min-h-screen py-16 px-6 text-white">
+        <div className="bg-gradient-to-b from-[#0f0f1a] via-[#05050a] to-[#000005] min-h-screen py-16 px-6 text-white" id="competence">
             <h1 className="text-4xl font-extrabold text-center mb-12 text-customBlue  tracking-widest neon-text">
                 Mes Compétences
             </h1>
