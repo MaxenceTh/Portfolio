@@ -13,6 +13,7 @@ function Navigation({ onLinkClick }) {
   }
 
   return (
+    <>
     <ul className="flex flex-col justify-center items-center gap-8">
       <li>
         <a href="#home" className="text-2xl font-semibold text-white hover:underline" onClick={onLinkClick}>{t("home")}</a>
@@ -42,6 +43,29 @@ function Navigation({ onLinkClick }) {
         </button>
       </li>
     </ul>
+    {/* Section Réseaux Sociaux */}
+  <div className="mt-12 flex flex-col items-center gap-4">
+    <p className="text-orange-200 uppercase tracking-widest text-sm font-bold">{t("social")}</p>
+    <div className="flex gap-6">
+      <a 
+        href="https://www.linkedin.com/in/maxence-thomas-a03b57298/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-xl text-white hover:underline"
+      >
+        LinkedIn
+      </a>
+      <a 
+        href="https://github.com/MaxenceTh" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-xl text-white hover:underline"
+      >
+        GitHub
+      </a>
+    </div>
+  </div>
+    </>
   );
 }
 
