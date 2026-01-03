@@ -4,6 +4,14 @@ import { useTranslation } from "react-i18next";
 
 function Navigation({ onLinkClick }) {
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
+
+  
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "fr" ? "en" : "fr"
+    i18n.changeLanguage(newLang)
+  }
+
   return (
     <ul className="flex flex-col justify-center items-center gap-8">
       <li>
@@ -18,6 +26,21 @@ function Navigation({ onLinkClick }) {
       <li>
         <a href="#contact" className="text-2xl font-semibold text-white hover:underline" onClick={onLinkClick}>{t("contact")}</a>
       </li>
+      <li>
+        <button
+          onClick={toggleLanguage}
+        >
+          <img
+            src={
+              i18n.language === "fr"
+                ? `${import.meta.env.BASE_URL}assets/flags/france.png`
+                : `${import.meta.env.BASE_URL}assets/flags/royaume-uni.png`
+            }
+            alt="Language flag"
+            className="w-10 h-10 object-cover"
+          />
+        </button>
+      </li>
     </ul>
   );
 }
@@ -25,7 +48,7 @@ function Navigation({ onLinkClick }) {
 const Navbar = ({ setCamTarget, defaultCam, menuCam }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkZone, setIsDarkZone] = useState(false);
-  const { i18n } = useTranslation();
+
 
   // Effet pour gérer le changement de style en fonction de la position de défilement
   useEffect(() => {
@@ -64,81 +87,52 @@ const Navbar = ({ setCamTarget, defaultCam, menuCam }) => {
   };
 
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "fr" ? "en" : "fr"
-    i18n.changeLanguage(newLang)
-  }
-
   return (
     <div className="relative w-full z-20">
+      
+      {/* BOUTON BURGER */}
       <button
-        onClick={toggleLanguage}
-        className={`fixed top-4 right-20 z-50
+        onClick={toggleMenu}
+        className={`fixed top-4 right-4 z-50
     flex items-center justify-center
     rounded-full
     w-14 h-14
     transition-all duration-300
     border-2
     ${isDarkZone || isOpen
-            ? "bg-orange border-orange hover:bg-orange/90"
-            : "bg-orange-50 border-orange-50 hover:bg-orange-100"
+            ? "bg-orange border-orange text-white hover:bg-orange/90"
+            : "bg-orange-50 border-orange-50 text-orange hover:bg-orange-100"
           }`}
-        aria-label="Change language"
       >
         <img
           src={
-            i18n.language === "fr"
-              ? `${import.meta.env.BASE_URL}assets/flags/france.png`
-              : `${import.meta.env.BASE_URL}assets/flags/royaume-uni.png`
+            isDarkZone
+              ? (isOpen ? "assets/close.svg" : "assets/menu.svg")
+              : (isOpen ? "assets/close.svg" : "assets/menuOrange.svg")
           }
-          alt="Language flag"
-          className="w-10 h-10 object-cover"
+          className="w-10 h-10"
+          alt="toggle"
         />
       </button>
-   
-      {/* BOUTON BURGER */ }
-  <button
-  onClick={toggleMenu}
-  className={`fixed top-4 right-4 z-50
-    flex items-center justify-center
-    rounded-full
-    w-14 h-14
-    transition-all duration-300
-    border-2
-    ${isDarkZone || isOpen
-      ? "bg-orange border-orange text-white hover:bg-orange/90"
-      : "bg-orange-50 border-orange-50 text-orange hover:bg-orange-100"
-    }`}
->
-  <img
-    src={
-      isDarkZone
-        ? (isOpen ? "assets/close.svg" : "assets/menu.svg")
-        : (isOpen ? "assets/close.svg" : "assets/menuOrange.svg")
-    }
-    className="w-10 h-10"
-    alt="toggle"
-  />
-</button>
 
-  {/* SIDEBAR */ }
-  {
-    isOpen && (
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: "0%" }}
-        exit={{ x: "100%" }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="fixed top-0 right-0 h-full bg-orange backdrop-blur-lg
+      {/* SIDEBAR */}
+      {
+        isOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: "0%" }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="fixed top-0 right-0 h-full bg-orange backdrop-blur-lg
                      shadow-xl w-full sm:w-1/3
                      flex justify-center items-center z-40"
-      >
-        <nav className="text-center">
-          <Navigation onLinkClick={closeMenu} />
-        </nav>
-      </motion.div>
-    )
-  }
+          >
+            <nav className="text-center">
+              <Navigation onLinkClick={closeMenu} />
+            </nav>
+          </motion.div>
+        )
+      }
     </div >
   );
 };
