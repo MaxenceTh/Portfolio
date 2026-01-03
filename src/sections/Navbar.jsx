@@ -130,7 +130,7 @@ const Navbar = ({ setCamTarget, defaultCam, menuCam }) => {
         exit={{ x: "100%" }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="fixed top-0 right-0 h-full bg-orange backdrop-blur-lg
-                     shadow-xl w-1/3 sm:w-1/3 w-2/3
+                     shadow-xl w-full sm:w-1/3
                      flex justify-center items-center z-40"
       >
         <nav className="text-center">
