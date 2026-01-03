@@ -63,7 +63,7 @@ const About = () => {
         >
 
           {/* ABOUT ME */}
-          <motion.h2 className="text-heading mb-12 md:mb-8" variants={childVariant}>
+          <motion.h2 className="text-heading mb-12 md:mb-8 px-2 md:px-0" variants={childVariant}>
              {t("aboutme")}
           </motion.h2>
 

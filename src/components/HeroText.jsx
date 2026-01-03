@@ -14,7 +14,7 @@ const HeroText = () => {
   return (
     <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
       {/* Desktop View */}
-      <div className="flex-col hidden md:flex c-space">
+      <div className="flex-col hidden md:flex px-50">
         <motion.h1
           className="text-4xl font-medium text-black"
           variants={variants}
@@ -68,7 +68,7 @@ const HeroText = () => {
         >
          {t("hi")}.
         </motion.p>
-        <div>
+        {/* <div>
           <motion.p
             className="text-5xl font-black text-black"
             variants={variants}
@@ -98,7 +98,7 @@ const HeroText = () => {
           >
              {t("developer")} ! 
           </motion.p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

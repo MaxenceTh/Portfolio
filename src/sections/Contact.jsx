@@ -94,7 +94,7 @@ const Contact = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <motion.h2 className="text-heading mb-12 text-white">Contact</motion.h2>
+          <motion.h2 className="text-heading mb-12 text-white px-2 md:px-0">Contact</motion.h2>
 
           <div className="w-full min-h-[70vh] flex justify-center items-center">
             <div className="w-full max-w-2xl p-8 rounded-2xl backdrop-blur-sm bg-white/5 

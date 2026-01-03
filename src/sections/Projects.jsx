@@ -45,7 +45,7 @@ const Projects = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <motion.h2 className="text-heading text-black  ">
+          <motion.h2 className="text-heading text-black px-2 md:px-0  ">
             {t("selectedProjets")} <span className="text-orange">{t("experience")}</span>
           </motion.h2>
 
