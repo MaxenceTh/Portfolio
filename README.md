@@ -16,4 +16,5 @@ Ce projet a été conçu comme un terrain d’expérimentation autour de Three.j
 - EmailJS
 - Framer Motion
 - i18next 
+- gsap
 
