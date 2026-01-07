@@ -45,7 +45,7 @@ const Projects = () => {
         variants={parentVariant}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="flex flex-col items-start md:items-end px-2 md:px-0 mr-5">
+        className="flex flex-col items-start md:items-end px-2 py-2 md:px-0 mr-5">
         <p className="text-2xl font-bold">
           <span className="text-orange">1 {t("an")} </span> {t("experiencePro")}
         </p>
