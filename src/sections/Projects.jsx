@@ -5,18 +5,10 @@ import { useTranslation } from "react-i18next";
 
 
 const Projects = () => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const springX = useSpring(x, { damping: 10, stiffness: 50 });
-  const springY = useSpring(y, { damping: 10, stiffness: 50 });
-  const handleMouseMove = (e) => {
-    x.set(e.clientX + 20);
-    y.set(e.clientY + 20);
-  };
-  const [preview, setPreview] = useState(null);
+
   const ref = useRef();
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  
+
   const parentVariant = {
     hidden: { opacity: 0 },
     visible: {
@@ -35,9 +27,6 @@ const Projects = () => {
       className=" section-spacing bg-orange-50"
       id="work"
     >
-
-
-
       <div className="container mx-auto max-w-7xl c-space">
         <motion.div
           ref={ref}
@@ -48,11 +37,22 @@ const Projects = () => {
           <motion.h2 className="text-heading text-black px-2 md:px-0  ">
             {t("selectedProjets")} <span className="text-orange">{t("experience")}</span>
           </motion.h2>
-
-
         </motion.div>
       </div>
 
+      <motion.div
+        ref={ref}
+        variants={parentVariant}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="flex flex-col items-start md:items-end px-2 md:px-0 mr-5">
+        <p className="text-2xl font-bold">
+          <span className="text-orange">1 {t("an")} </span> {t("experiencePro")}
+        </p>
+        <p className="text-xl">
+          <span className="text-orange">1 {t("an")} </span>{t("experiencePerso")}
+        </p>
+      </motion.div>
 
       <HorizontalScrollCards />
 
