@@ -15,23 +15,24 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   const [showScene, setShowScene] = useState(false);
 
-  // ⏱️ Loader minimum 5s
-  useEffect(() => {
-    const timer = setTimeout(() => setShowScene(true), 5000);
-    return () => clearTimeout(timer);
-  }, []);
+  // // ⏱️ Loader minimum 5s
+  // useEffect(() => {
+  //   // const timer = setTimeout(() => setShowScene(true), 5000);
+  //   const timer = setTimeout(() => setShowScene(true), 0) // Temporaire
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  useEffect(() => {
-    if (!showScene) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+  // useEffect(() => {
+  //   if (!showScene) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "";
+  //   }
 
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [showScene]);
+  //   return () => {
+  //     document.body.style.overflow = "";
+  //   };
+  // }, [showScene]);
 
   return (
     <section
@@ -44,8 +45,7 @@ const Hero = () => {
         {/* CANVAS (always mounted) */}
       <figure className="absolute inset-0" style={{ width: "100%", height: "100%" }} >
           <Canvas
-            className={`transition-opacity duration-700 ${showScene ? "opacity-100" : "opacity-0"
-              }`}
+            className={`transition-opacity duration-700`}
           >
             <ambientLight intensity={1.5} />
             <directionalLight position={[3, 10, 7]} intensity={1.5} />
@@ -65,7 +65,7 @@ const Hero = () => {
 
         
 
-        {/* OVERLAY LOADER (HTML ONLY) */}
+        {/* OVERLAY LOADER (HTML ONLY)
         {!showScene && (
           <div
             className="fixed inset-0 z-[9999] flex items-center justify-center 
@@ -73,7 +73,7 @@ const Hero = () => {
           >
             <OverlayLoader />
           </div>
-        )}
+        )} */}
 
          <SocialMedia />
 
