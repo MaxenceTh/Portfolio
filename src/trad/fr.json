@@ -26,12 +26,10 @@
   "experiencePro": "expérience pro.",
   "experiencePerso": "projets perso.",
   "an": "an",
-  
   "projects": {
     "internship": "Stage",
     "personalStatus": "Projet personnel",
-    "personal": "Moi",
-
+    "personal": "GitHub",
     "addressApp": {
       "title": "Application de validation et de correction d’adresses",
       "company": "Finistère Assurance",
@@ -41,7 +39,6 @@
       "desc4": "Gestion de données spatiales avec PostgreSQL / PostGIS",
       "desc5": "Développement d’une API SOAP avec Spring Boot"
     },
-
     "svrAI": {
       "title": "Estimation de la hauteur du SVR-Lazartigue à l’aide de l’intelligence artificielle",
       "company": "MerConcept & Université de Brest",
@@ -51,7 +48,6 @@
       "desc4": "Évaluation des performances du modèle et optimisation des hyperparamètres afin d’améliorer la précision",
       "desc5": "Collaboration avec des experts métier pour valider les résultats et garantir leur applicabilité"
     },
-
     "roquette": {
       "title": "Conception d’un site web environnemental",
       "company": "Agence Roquette",
@@ -60,7 +56,6 @@
       "desc3": "Personnalisation de thèmes WordPress pour répondre aux besoins du client",
       "desc4": "Optimisation des performances et de l’accessibilité du site"
     },
-
     "websport": {
       "title": "Application WebSport",
       "desc1": "Développement d’une application web dédiée à l’entraînement et à la gestion sportive",
@@ -68,12 +63,16 @@
       "desc3": "Développement d’API REST avec Spring Boot et PostgreSQL",
       "desc4": "Création d’une interface front-end responsive avec React et TypeScript"
     },
-
     "badminton": {
       "title": "Application d’entraînement au badminton",
       "desc1": "Développement d’une application d’entraînement au badminton pour aider les joueurs à améliorer leurs performances",
       "desc2": "Implémentation de fonctionnalités pour la gestion des séances d’entraînement et le suivi de la progression",
       "desc3": "Conception d’une interface utilisateur intuitive avec Vue.js et TailwindCSS"
+    },
+    "prestige": {
+      "title": "Application Prestige",
+      "desc1": "Développement d’une application web dédiée à l'affichage des films du monde entier",
+      "desc2": "Utilisation de l'api TMDB"
     }
   }
 }

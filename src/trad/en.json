@@ -1,7 +1,7 @@
 {
   "aboutme": "About me",
   "aboutmetext-1": "I'm Maxence Thomas, fullstack developer born and raised in Bretagne, France.",
-  "aboutmetext-2":"I'm passionate about crafting seamless user experiences on the front end while designing secure, high-performance back-end systems. Full-stack development allows me to bring ideas to life from concept to production",
+  "aboutmetext-2": "I'm passionate about crafting seamless user experiences on the front end while designing secure, high-performance back-end systems. Full-stack development allows me to bring ideas to life from concept to production",
   "talk": "Let's talk",
   "myresume": "My Resume",
   "hi": "Hi, I'm Maxence",
@@ -26,12 +26,10 @@
   "experiencePro": "pro experience.",
   "experiencePerso": "personal projects.",
   "an": "year",
-  
   "projects": {
     "internship": "Internship",
     "personalStatus": "Personal Project",
-    "personal": "Me",
-
+    "personal": "GitHub",
     "addressApp": {
       "title": "Address Validation & Correction App",
       "company": "Finistère Assurance",
@@ -41,7 +39,6 @@
       "desc4": "Managed spatial data with PostgreSQL / PostGIS",
       "desc5": "Developed a SOAP API with Spring Boot"
     },
-
     "svrAI": {
       "title": "Estimate the Height of SVR-Lazartigue Using AI",
       "company": "MerConcept & Brest University",
@@ -51,7 +48,6 @@
       "desc4": "Evaluated model performance and optimized hyperparameters to improve accuracy",
       "desc5": "Collaborated with domain experts to validate results and ensure practical applicability"
     },
-
     "roquette": {
       "title": "Environmental Website Design",
       "company": "Agence Roquette",
@@ -60,7 +56,6 @@
       "desc3": "Customized WordPress themes to meet client requirements",
       "desc4": "Optimized site performance and accessibility"
     },
-
     "websport": {
       "title": "WebSport Application",
       "desc1": "Developed a web application for sports training and management",
@@ -68,12 +63,16 @@
       "desc3": "Built RESTful APIs using Spring Boot and PostgreSQL",
       "desc4": "Created a responsive frontend with React and TypeScript"
     },
-
     "badminton": {
       "title": "Badminton Training Application",
       "desc1": "Developed a badminton training application to help players improve their skills",
       "desc2": "Implemented features for training sessions and progress tracking",
       "desc3": "Designed a user-friendly interface using Vue.js and TailwindCSS"
+    },
+    "prestige": {
+      "title": "Prestige Application",
+      "desc1": "Development of a web application dedicated to displaying movies from around the world",
+      "desc2": "Use of the TMDB API"
     }
   }
 }

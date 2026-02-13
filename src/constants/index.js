@@ -8,25 +8,25 @@ export const stack = [
   {
     name: "React"
   },
-  {    
+  {
     name: "TailwindCSS"
   },
-  {    
+  {
     name: "JavaScript"
   },
-  {    
+  {
     name: "Docker"
   },
-  {    
+  {
     name: "Git"
   },
-  {    
+  {
     name: "GitHub"
   },
-  {    
+  {
     name: "Vue.js"
   },
-  {    
+  {
     name: "WordPress"
   },
 
@@ -97,6 +97,21 @@ export const items = [
       "projects.websport.desc3",
       "projects.websport.desc4"
     ]
+  },
+
+  {
+    id: "prestige",
+    titleKey: "projects.prestige.title",
+    companyKey: "projects.personal",
+    statusKey: "projects.personalStatus",
+    link: "https://github.com/MaxenceTh/Prestige",
+    img: "./assets/prestige.png",
+    stack: ["React", "TMDB", "TailwindCSS", "TypeScript", "Shadcn/ui"],
+    descriptionKeys: [
+      "projects.prestige.desc1",
+      "projects.prestige.desc2",
+    ]
+
   },
 
   {
