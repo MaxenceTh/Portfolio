@@ -89,7 +89,7 @@ export const items = [
     companyKey: "projects.personal",
     statusKey: "projects.personalStatus",
     link: "https://github.com/MaxenceTh/WebSport",
-    img: "./assets/badminton.png",
+    img: "./assets/hercule.png",
     stack: ["React", "Java", "Spring", "PostgreSQL", "TypeScript"],
     descriptionKeys: [
       "projects.websport.desc1",
@@ -114,20 +114,20 @@ export const items = [
 
   },
 
-  {
-    id: "badminton",
-    titleKey: "projects.badminton.title",
-    companyKey: "projects.personal",
-    statusKey: "projects.personalStatus",
-    link: "https://github.com/MaxenceTh/BadmintonTraining",
-    img: "./assets/badminton.png",
-    stack: ["Vue", "TailwindCSS", "JavaScript"],
-    descriptionKeys: [
-      "projects.badminton.desc1",
-      "projects.badminton.desc2",
-      "projects.badminton.desc3"
-    ]
-  }
+  // {
+  //   id: "badminton",
+  //   titleKey: "projects.badminton.title",
+  //   companyKey: "projects.personal",
+  //   statusKey: "projects.personalStatus",
+  //   link: "https://github.com/MaxenceTh/BadmintonTraining",
+  //   img: "./assets/badminton.png",
+  //   stack: ["Vue", "TailwindCSS", "JavaScript"],
+  //   descriptionKeys: [
+  //     "projects.badminton.desc1",
+  //     "projects.badminton.desc2",
+  //     "projects.badminton.desc3"
+  //   ]
+  // }
 ]
 
 // export const items = [

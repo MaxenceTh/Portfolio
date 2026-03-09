@@ -34,8 +34,8 @@ function Navigation({ onLinkClick }) {
           <img
             src={
               i18n.language === "fr"
-                ? `${import.meta.env.BASE_URL}assets/flags/france.png`
-                : `${import.meta.env.BASE_URL}assets/flags/royaume-uni.png`
+                ? `${import.meta.env.BASE_URL}assets/flags/royaume-uni.png`
+                : `${import.meta.env.BASE_URL}assets/flags/france.png`
             }
             alt="Language flag"
             className="w-10 h-10 object-cover"
