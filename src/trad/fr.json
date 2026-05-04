@@ -1,10 +1,10 @@
 {
-  "aboutme": "À propos de moi",
-  "aboutmetext-1": "Je m'appelle Maxence, développeur full stack né et ayant grandi en Bretagne.",
+  "aboutme": "Qui suis-je ?",
+  "aboutmetext-1": "Ingénieur développeur full stack diplômé de l'Université de Brest.",
   "aboutmetext-2": "Je suis passionné par la création d'expériences utilisateur fluides côté front-end, tout en concevant des systèmes back-end sécurisés et performants. Le développement full stack me permet de donner vie aux idées, du concept à la production.",
   "talk": "Discutons",
   "myresume": "Mon CV",
-  "hi": "Salut, je m'appelle Maxence",
+  "hi": "Maxence Thomas",
   "Iam": "Je suis",
   "developer": "Développeur",
   "selectedProjets": "Mes projets sélectionnés",

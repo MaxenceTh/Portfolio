@@ -45,13 +45,13 @@ const About = () => {
     },
   };
 
-  const  { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section className="section-spacing" id="about">
 
 
-     
+
 
       <div className="container mx-auto max-w-7xl c-space text-white ">
 
@@ -64,7 +64,7 @@ const About = () => {
 
           {/* ABOUT ME */}
           <motion.h2 className="text-heading mb-12 md:mb-8 px-2 md:px-0" variants={childVariant}>
-             {t("aboutme")}
+            {t("aboutme")}
           </motion.h2>
 
           <div className="flex md:flex-row justify-between items-start gap-8">
@@ -95,15 +95,29 @@ const About = () => {
               href={`${import.meta.env.BASE_URL}assets/cv.pdf`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 ml-3 font-bold text-orange-100  px-2 py-1 rounded hover:underline transition-colors cursor-pointer"
+              className="group relative inline-flex items-center gap-2 ml-6 transition-all active:translate-y-1"
             >
-              <span className="text-sm">{t("myresume")}</span>
-              <span
-                className="inline-flex items-center justify-center w-5 h-5 border border-orange-100 text-orange-100 rounded-sm text-xs"
-                aria-hidden="true"
-              >
-                ↗
-              </span>
+              {/* Effet d'ombre en arrière-plan */}
+              <span className="absolute inset-0 translate-x-1 translate-y-1 rounded-full bg-orange-700/40 group-hover:translate-x-1.5 group-hover:translate-y-1.5 transition-transform"></span>
+
+              {/* Corps du bouton */}
+              <button className="cursor-pointer relative inline-flex items-center gap-2 bg-transparent text-orange-100 font-bold rounded-full 
+                    px-5 py-2 border-2 border-orange-100/50 backdrop-blur-sm
+                    group-hover:border-orange-100 group-hover:bg-orange-100/10 transition-colors">
+                <span className="text-sm uppercase tracking-wider">{t("myresume")}</span>
+
+                <div className="flex items-center justify-center w-5 h-5 bg-orange-100 text-orange-700 rounded-full transition-transform group-hover:rotate-45">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    className="w-3 h-3"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </div>
+              </button>
             </a>
           </motion.div>
 

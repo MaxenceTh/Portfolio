@@ -22,7 +22,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          {t("hi")}.
+          {/* {t("hi")}. */}
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
@@ -33,7 +33,7 @@ const HeroText = () => {
             transition={{ delay: 1.2 }}
           >
             {/* A Developer <br /> Dedicated to Crafting */}
-            {t("Iam")}
+            {t("developer")}
           </motion.p>
           <motion.div
             variants={variants}
@@ -47,13 +47,13 @@ const HeroText = () => {
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-medium text-black"
+            className="text-2xl font-light text-black"
             variants={variants}
             initial="hidden"
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            {t("developer")} ! 
+            {t("hi")}
           </motion.p>
         </div>
       </div>
