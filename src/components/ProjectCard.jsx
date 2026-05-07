@@ -1,71 +1,74 @@
 import { useTranslation } from "react-i18next";
+
 export default function ProjectCard({ item, openModal }) {
   const { t } = useTranslation();
+
   return (
     <div
       className="
-        snap-center flex-shrink-0 rounded-3xl shadow-2xl border-4 border-orange
-        bg-orange-50 overflow-hidden transition-transform hover:scale-105
-        w-[85vw] min-h-[550px] h-auto
-        md:w-[60vw] md:min-h-[650px]
-        lg:w-[10vw] lg:min-h-[500px]
-        xl:w-[35vw] xl:min-h-[380px]
+        group relative flex flex-col rounded-[2rem] border-4 border-orange-600
+        bg-orange-50 overflow-hidden transition-all duration-300
+        shadow-[8px_8px_0px_0px_rgba(234,88,12,1)]
+        hover:shadow-[12px_12px_0px_0px_rgba(234,88,12,1)]
+        hover:-translate-x-1 hover:-translate-y-1
+        w-full max-w-[420px] h-full min-h-[500px]
       "
     >
-      {/* IMAGE */}
-      <div className="w-full h-[45%] sm:h-[55%] md:h-[60%]">
+      {/* IMAGE - Ratio fixe pour la grille */}
+      <div className="relative w-full h-56 overflow-hidden border-b-4 border-orange-600">
         <img
           src={item.img}
           alt={t(item.titleKey)}
-          className="w-full h-full object-cover border-b-4 border-orange"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
-      </div>
-
-      {/* BADGES + STACK */}
-      <div className="flex flex-col items-center px-3 mt-2 text-black gap-2 text-center">
-        <p className="px-3 py-1 bg-orange-100 text-black font-semibold rounded-full border border-black-300">
-          {t(item.statusKey)}
-        </p>
-        <div className="flex flex-wrap gap-2 justify-center max-w-full">
-          {item.stack.map((tech, index) => (
-            <div
-              key={index}
-              className="bg-orange-200 px-2 py-1 rounded border border-orange-300 text-sm"
-            >
-              {tech}
-            </div>
-          ))}
+        {/* Petit badge flottant sur l'image */}
+        <div className="absolute top-4 left-4">
+          <span className="bg-zinc-900 text-orange-50 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-[2px_2px_0px_0px_#ea580c]">
+            {t(item.statusKey)}
+          </span>
         </div>
       </div>
 
-      {/* TEXT */}
-      <div className="p-4 text-center flex flex-col justify-center flex-1">
-        <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{t(item.titleKey)}</h3>
-        <p className="text-gray-950 mb-4 text-sm sm:text-base">
+      {/* CONTENU TEXTUEL */}
+      <div className="p-6 flex flex-col flex-1">
+        
+        {/* TITRE & ENTREPRISE */}
+        <div className="mb-4">
+          <h3 className="text-2xl font-black text-zinc-900 uppercase tracking-tighter leading-none mb-1">
+            {t(item.titleKey)}
+          </h3>
           <a
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Open ${t(item.titleKey)} website`}
-            className="inline-flex items-center gap-2 ml-3 text-sm text-black bg-orange-50 px-2 py-1 rounded border border-orange-200 hover:bg-orange-100 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1 text-sm font-bold text-orange-600 hover:underline"
           >
-            <span className="text-sm">{t(item.companyKey)}</span>
-            <span
-              className="inline-flex items-center justify-center w-5 h-5 border border-orange text-orange-700 rounded-sm text-xs"
-              aria-hidden="true"
-            >
-              ↗
-            </span>
+            {t(item.companyKey)}
+            <span className="text-[10px]">↗</span>
           </a>
-        </p>
+        </div>
 
-        <div>
+        {/* STACK - Tags plus compacts et stylés */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {item.stack.map((tech, index) => (
+            <span
+              key={index}
+              className="bg-white border-2 border-orange-200 px-2 py-0.5 rounded-lg text-[10px] font-black text-orange-700 uppercase tracking-tight"
+            >
+              #{tech}
+            </span>
+          ))}
+        </div>
+
+        {/* BOUTON ACTION - Aligné en bas */}
+        <div className="mt-auto">
           <button
             className="
-              cursor-pointer bg-orange-100 text-orange-700 font-bold rounded-full 
-              px-4 py-2 shadow-[0_4px_0_#ea580c] border-2 border-orange-300
-              hover:bg-orange-200 hover:shadow-[0_6px_0_#d9460f]
-              active:translate-y-1 active:shadow-[0_2px_0_#ea580c]
+              w-full cursor-pointer bg-orange-100 text-orange-700 font-black uppercase text-sm
+              rounded-xl px-4 py-3 shadow-[0_4px_0_#ea580c] border-2 border-orange-600
+              hover:bg-orange-200 hover:shadow-[0_2px_0_#ea580c] hover:translate-y-[2px]
+              active:translate-y-[4px] active:shadow-none
+              transition-all
             "
             onClick={openModal}
           >

@@ -3,8 +3,6 @@ import { motion, useInView } from "motion/react";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 
-import GridPattern from "../components/GridPattern";
-
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
@@ -14,171 +12,130 @@ const Contact = () => {
   const [error, setError] = useState(false);
 
   const parentVariant = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
-      },
+      y: 0,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
     },
   };
 
-  const childVariant = {
-    hidden: { opacity: 0, x: -50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: "spring",
-        bounce: 0.7,
-        duration: 0.8,
-        staggerChildren: 0.12,
-        delayChildren: 0.2,
-      },
-    },
+  const inputVariant = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0 },
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
-      .sendForm(
-        "service_vqujx0a", // ton service EmailJS
-        "template_gxqnf11", // ton template EmailJS
-        formRef.current,
-        "HN924O7uVNytm7KFY" // ta clé publique EmailJS
-      )
+      .sendForm("service_vqujx0a", "template_gxqnf11", formRef.current, "HN924O7uVNytm7KFY")
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           setMessageSent(true);
           setError(false);
           e.target.reset();
         },
-        (err) => {
-          console.error(err.text);
-          setError(true);
-        }
+        () => setError(true)
       );
   };
 
   return (
-    <section className="section-spacing relative" id="contact">
-      <GridPattern squares={[
-        // H 
-        [1, 1], [1, 2], [1, 3], [1, 4], [1, 5],
-        [3, 1], [3, 2], [3, 3], [3, 4], [3, 5],
-        [2, 3],
-        // I 
-        [5, 1], [5, 2], [5, 3], [5, 4], [5, 5],
-        // R 
-        [7, 1], [7, 2], [7, 3], [7, 4], [7, 5], [8, 1], [9, 1], [9, 2], [9, 3], [8, 3], [9, 4], [8, 5],
-        // E 
-        [11, 1], [11, 2], [11, 3], [11, 4], [11, 5], [12, 1], [13, 1], [12, 3], [13, 3], [12, 5], [13, 5],
-        // M
-        [11, 7], [11, 8], [11, 9], [11, 10], [11, 11], [12, 8], [13, 9], [14, 8], [15, 7], [15, 8], [15, 9], [15, 10], [15, 11],
-        // E 
-        [17, 7], [17, 8], [17, 9], [17, 10], [17, 11], [18, 7], [19, 7], [18, 9], [19, 9], [18, 11], [19, 11],
-      ]}
-        width={80}
-        height={80} x={-40} y={-40}
-        strokeDasharray="6 6"
-        className="absolute inset-0 h-full w-full opacity-60 -z-10 stroke-orange-400 fill-orange-400"
-      />
+    <section className="section-spacing relative overflow-hidden" id="contact">
 
-      <div className="container mx-auto max-w-7xl c-space">
+      {/* 1. FOND DÉCORATIF (Bien au fond avec -z-10) */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-orange-200/50 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-orange-300/30 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="container mx-auto max-w-7xl c-space relative z-10">
         <motion.div
           ref={ref}
           variants={parentVariant}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
+          className="flex flex-col items-center"
         >
-          <motion.h2 className="text-heading mb-12 text-white px-2 md:px-0">Contact</motion.h2>
+          {/* TITRE */}
+          <motion.div variants={inputVariant} className="mb-12">
+            <h2 className="inline-block px-8 py-3 bg-zinc-900 text-orange-500 font-black uppercase tracking-tighter text-4xl md:text-6xl rounded-2xl shadow-[8px_8px_0px_0px_#ea580c]">
+              Contact _
+            </h2>
+          </motion.div>
 
-          <div className="w-full min-h-[70vh] flex justify-center items-center">
-            <div className="w-full max-w-2xl p-8 rounded-2xl backdrop-blur-sm bg-white/5 
-                    border border-white/20 shadow-[0_0_40px_-10px_rgba(0,0,0,0.6)]">
-              <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-8">
-                <div className="flex flex-col gap-2">
-                  <motion.label className="text-sm text-white" variants={parentVariant}>
-                    {t("contactName")}
-                  </motion.label>
-                  <motion.input
-                    variants={childVariant}
-                    type="text"
-                    name="user_name"
-                    className="px-4 py-3 rounded-lg bg-white text-black border border-white focus:outline-none focus:ring-2 focus:ring-orange-400"
-                  />
+          {/* 2. LE FORMULAIRE (Forcé en haut de la pile avec z-20) */}
+          <div className="w-full max-w-2xl relative z-20">
+            <motion.div
+              className="bg-zinc-900 border-4 border-orange-600 p-8 md:p-12 rounded-[2.5rem] shadow-[15px_15px_0px_0px_#ea580c]"
+            >
+              <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-6">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-orange-500 font-black uppercase tracking-widest text-xs ml-2">
+                      {t("contactName")}
+                    </label>
+                    <input
+                      type="text"
+                      name="user_name"
+                      required
+                      className="px-4 py-4 rounded-xl bg-orange-50 text-zinc-900 border-4 border-transparent focus:border-orange-600 outline-none font-bold transition-all"
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <label className="text-orange-500 font-black uppercase tracking-widest text-xs ml-2">
+                      {t("contactLastname")}
+                    </label>
+                    <input
+                      type="text"
+                      name="user_lastname"
+                      required
+                      className="px-4 py-4 rounded-xl bg-orange-50 text-zinc-900 border-4 border-transparent focus:border-orange-600 outline-none font-bold transition-all"
+                    />
+                  </div>
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <motion.label className="text-sm text-white" variants={parentVariant}>
-                    {t("contactLastname")}
-                  </motion.label>
-                  <motion.input
-                    variants={childVariant}
-                    type="text"
-                    name="user_lastname"
-                    className="px-4 py-3 rounded-lg bg-white text-black border border-white focus:outline-none focus:ring-2 focus:ring-orange-400"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <motion.label className="text-sm text-white" variants={parentVariant}>
+                  <label className="text-orange-500 font-black uppercase tracking-widest text-xs ml-2">
                     {t("contactEmail")}
-                  </motion.label>
-                  <motion.input
-                    variants={childVariant}
+                  </label>
+                  <input
                     type="email"
                     name="user_email"
-                    className="px-4 py-3 rounded-lg bg-white text-black border border-white focus:outline-none focus:ring-2 focus:ring-orange-400"
+                    required
+                    className="px-4 py-4 rounded-xl bg-orange-50 text-zinc-900 border-4 border-transparent focus:border-orange-600 outline-none font-bold transition-all"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <motion.label className="text-sm text-white" variants={parentVariant}>
+                  <label className="text-orange-500 font-black uppercase tracking-widest text-xs ml-2">
                     {t("contactMessage")}
-                  </motion.label>
-                  <motion.textarea
-                    variants={childVariant}
-                    rows="5"
+                  </label>
+                  <textarea
+                    rows="4"
                     name="message"
-                    className="px-4 py-3 rounded-lg bg-white text-black border border-white focus:outline-none focus:ring-2 focus:ring-orange-400"
-                  ></motion.textarea>
+                    required
+                    className="px-4 py-4 rounded-xl bg-orange-50 text-zinc-900 border-4 border-transparent focus:border-orange-600 outline-none font-bold transition-all resize-none"
+                  ></textarea>
                 </div>
 
-                <div className="flex justify-center">
-                  <motion.button variants={parentVariant} type="submit" className="w-1/3 cursor-pointer bg-orange-100 text-orange-700 font-bold rounded-full 
-                    px-4 py-2 shadow-[0_4px_0_#ea580c] border-2 border-orange-300
-                    hover:bg-orange-200 hover:shadow-[0_6px_0_#d9460f]
-                    active:translate-y-1 active:shadow-[0_2px_0_#ea580c]" >
-                    {t("contactSend")}
-                  </motion.button>
-
-                  {messageSent && (
-                    <p className="text-green-500 mt-2">{t("contactSuccess")}</p>
-                  )}
-                  {error && (
-                    <p className="text-red-500 mt-2">{t("contactError")}</p>
-                  )}
-                </div>
+                <button
+                  type="submit"
+                  className="w-full cursor-pointer bg-orange-600 text-white font-black uppercase tracking-tighter text-xl rounded-xl 
+                    px-8 py-5 border-4 border-zinc-900 shadow-[6px_6px_0px_0px_#fff]
+                    hover:shadow-none hover:translate-x-1 hover:translate-y-1
+                    active:scale-95 transition-all"
+                >
+                  {t("contactSend")}
+                </button>
               </form>
-            </div>
+            </motion.div>
           </div>
-
         </motion.div>
-        <footer className="text-xs text-zinc-400 text-center py-4">
-          Flag icons by{" "}
-          <a
-            href="https://www.flaticon.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            Flaticon
-          </a>{" "}
-          (France & UK)
+
+        <footer className="mt-20 text-[10px] font-black uppercase tracking-widest text-zinc-500 text-center pb-8">
+          Design & Dev by Maxence — © {new Date().getFullYear()} — Flag icons by <a href="https://www.flaticon.com" target="_blank" className="text-orange-600 hover:underline">Flaticon</a>
         </footer>
       </div>
     </section>
